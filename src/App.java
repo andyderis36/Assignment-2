@@ -5,7 +5,7 @@ public class App {
     private static Scanner scanner = new Scanner(System.in);
     // Set the maximum size for arrays storing student data
     private static int maxSize = 100;
-    // Declare arrays to store student data: names, matric numbers, carry marks, and final exam marks
+    // Declare arrays to store student data: names, matrics, carry marks, final exam marks
     private static String[] names = new String[maxSize];
     private static int[] matrics = new int[maxSize];
     private static double[] carryMarks = new double[maxSize];
@@ -208,35 +208,34 @@ public class App {
         return 0.6 * carryMark + 0.4 * finalExamMark;
     }
 
-  // Method to calculate grade based on total mark
-private static String calculateGrade(double totalMark) {
-    if (totalMark > 100) {
-        return "S+++";
-    } else if (totalMark >= 95) {
-        return "A+";
-    } else if (totalMark >= 90) {
-        return "A";
-    } else if (totalMark >= 85) {
-        return "B+";
-    } else if (totalMark >= 80) {
-        return "B";
-    } else if (totalMark >= 75) {
-        return "C+";
-    } else if (totalMark >= 70) {
-        return "C";
-    } else if (totalMark >= 65) {
-        return "D+";
-    } else if (totalMark >= 60) {
-        return "D";
-    } else if (totalMark >= 55) {
-        return "E+";
-    } else if (totalMark >= 50) {
-        return "E";
-    } else {
-        return "FAIL";
+    // Method to calculate grade based on total mark
+    private static String calculateGrade(double totalMark) {
+        if (totalMark > 100) {
+            return "S+++";
+        } else if (totalMark >= 95) {
+            return "A+";
+        } else if (totalMark >= 90) {
+            return "A";
+        } else if (totalMark >= 85) {
+            return "B+";
+        } else if (totalMark >= 80) {
+            return "B";
+        } else if (totalMark >= 75) {
+            return "C+";
+        } else if (totalMark >= 70) {
+            return "C";
+        } else if (totalMark >= 65) {
+            return "D+";
+        } else if (totalMark >= 60) {
+            return "D";
+        } else if (totalMark >= 55) {
+            return "E+";
+        } else if (totalMark >= 50) {
+            return "E";
+        } else {
+            return "FAIL";
+        }
     }
-}
-
 
     // Method to find the index of a student based on matric number
     private static int findStudentIndex(int matric, int[] matrics, int count) {
